@@ -67,6 +67,7 @@ h1 {
     color: #2d5c88;
     font-weight: 500;
     width: 60%;
+    max-width: 300px;
 }
 .music-section {
     text-align: center;
@@ -87,11 +88,32 @@ h1 {
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(45,92,136,0.12);
     transition: background 0.2s;
+    max-width: 90vw;
+    width: 100%;
+    box-sizing: border-box;
 }
 .music-btn:hover {
     background: #184366;
 }
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+        max-width: 98vw;
+        margin: 12px auto 12px auto;
+    }
+    .date-list li {
+        width: 90%;
+        max-width: 98vw;
+        font-size: 1em;
+    }
+    .music-text {
+        font-size: 1em;
+    }
+    .music-btn {
+        padding: 10px 0;
+        font-size: 1em;
+    }
+}
 </style>
 </body>
 </html>
-
