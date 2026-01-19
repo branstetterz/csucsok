@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Csúcsok</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Csúcsok</h1>
+
+        <ul class="date-list">
+            <li>2026-01-24</li>
+        </ul>
+
+        <!-- Zenelejátszó hozzáadása -->
+        <audio id="bg-music" src="/sounds/esztike_lany.mp3" preload="auto" muted></audio>
+
+        <div class="music-section">
+            <p class="music-text">Ha nagyon várod a következő csúcsot, kattints a gombra!</p>
+            <button id="playMusicBtn" class="music-btn">CSÚCS</button>
+        </div>
+    </div>
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('bg-music');
+    var playBtn = document.getElementById('playMusicBtn');
+    audio.muted = true;
+    audio.play();
+    playBtn.addEventListener('click', function() {
+        audio.muted = false;
+        audio.play();
+        // A gomb nem tűnik el
+    });
+});
+</script>
+<style>
+body {
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 32px;
+    max-width: 500px;
+    margin: 40px auto 24px auto;
+}
+h1 {
+    color: #2d5c88;
+    text-align: center;
+}
+.date-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.date-list li {
+    background: #f0f4fa;
+    margin: 8px auto;
+    padding: 8px 0;
+    border-radius: 6px;
+    color: #2d5c88;
+    font-weight: 500;
+    width: 60%;
+}
+.music-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.music-text {
+    font-size: 1.1em;
+    color: #2d5c88;
+    margin-bottom: 12px;
+}
+.music-btn {
+    background: #2d5c88;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(45,92,136,0.12);
+    transition: background 0.2s;
+}
+.music-btn:hover {
+    background: #184366;
+}
+</style>
+</body>
+</html>
+
